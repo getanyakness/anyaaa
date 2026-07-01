@@ -102,3 +102,39 @@ function renderInstagramLinks() {
 }
 
 document.addEventListener("DOMContentLoaded", renderInstagramLinks);
+
+const translations = {
+  "nav.work": { hr: "Radovi", en: "Work" },
+  "nav.instagram": { hr: "Instagram", en: "Instagram" },
+  "nav.about": { hr: "O meni", en: "About" },
+  "nav.contact": { hr: "Kontakt", en: "Contact" },
+  "hero.tagline": { hr: "Studentica dizajna", en: "Design Student" },
+  "work.heading": { hr: "Radovi", en: "Work" },
+  "filter.all": { hr: "Sve", en: "All" },
+  "filter.logos": { hr: "Logotipi", en: "Logos" },
+  "filter.posters": { hr: "Posteri i Fleri", en: "Posters & Flyers" },
+  "filter.social": { hr: "Društvene mreže", en: "Social Media" },
+  "instagram.heading": { hr: "Instagram", en: "Instagram" },
+  "about.heading": { hr: "O meni", en: "About" },
+};
+
+function applyLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (translations[key]) {
+      el.textContent = translations[key][lang];
+    }
+  });
+  document.getElementById("lang-toggle").textContent = lang === "hr" ? "EN" : "HR";
+  document.documentElement.lang = lang;
+  localStorage.setItem("lang", lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "hr";
+  applyLanguage(savedLang);
+  document.getElementById("lang-toggle").addEventListener("click", () => {
+    const current = localStorage.getItem("lang") || "hr";
+    applyLanguage(current === "hr" ? "en" : "hr");
+  });
+});
