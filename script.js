@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) entry.target.classList.add("visible");
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0, rootMargin: "0px 0px -10% 0px" }
   );
   document.querySelectorAll("#work, #instagram, #about, #contact").forEach((section) => {
     section.classList.add("reveal");
