@@ -138,3 +138,18 @@ document.addEventListener("DOMContentLoaded", () => {
     applyLanguage(current === "hr" ? "en" : "hr");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll("#work, #instagram, #about, #contact").forEach((section) => {
+    section.classList.add("reveal");
+    observer.observe(section);
+  });
+});
