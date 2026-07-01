@@ -76,3 +76,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") closeLightbox();
   });
 });
+
+const instagramLinks = [
+  "https://www.instagram.com/reel/DUD4hx6Ald7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/reel/DScEDhjALoK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/reel/DQkLpdyAIbb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/p/DFEK_Z1CO8w/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/p/C6FJObMI86r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/p/C7CbcdpNznm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/p/C5er-8GISwH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  "https://www.instagram.com/p/C580uUhIScY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+];
+
+function renderInstagramLinks() {
+  const container = document.getElementById("instagram-links");
+  instagramLinks.forEach((url, index) => {
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.className = "instagram-link-card";
+    a.textContent = `#${index + 1}`;
+    container.appendChild(a);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderInstagramLinks);
