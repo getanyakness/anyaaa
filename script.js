@@ -49,3 +49,30 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", () => applyFilter(tab.dataset.category));
   });
 });
+
+function openLightbox(src, alt) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = src;
+  img.alt = alt;
+  lightbox.classList.remove("hidden");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.add("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("work-grid").addEventListener("click", (event) => {
+    if (event.target.classList.contains("work-card")) {
+      openLightbox(event.target.dataset.src, event.target.alt);
+    }
+  });
+  document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+  document.getElementById("lightbox").addEventListener("click", (event) => {
+    if (event.target.id === "lightbox") closeLightbox();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeLightbox();
+  });
+});
