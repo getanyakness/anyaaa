@@ -78,15 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const instagramPosts = [
-  // ponytail: placeholder titles, swap in real captions when known
-  { title: "Objava 1", url: "https://www.instagram.com/reel/DUD4hx6Ald7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 2", url: "https://www.instagram.com/reel/DScEDhjALoK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 3", url: "https://www.instagram.com/reel/DQkLpdyAIbb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 4", url: "https://www.instagram.com/p/DFEK_Z1CO8w/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 5", url: "https://www.instagram.com/p/C6FJObMI86r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 6", url: "https://www.instagram.com/p/C7CbcdpNznm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 7", url: "https://www.instagram.com/p/C5er-8GISwH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-  { title: "Objava 8", url: "https://www.instagram.com/p/C580uUhIScY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Poster za dan zaljubljenih", url: "https://www.instagram.com/reel/DUD4hx6Ald7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Poster za godišnju žurku", url: "https://www.instagram.com/reel/DScEDhjALoK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Video za party nove godine", url: "https://www.instagram.com/reel/DQkLpdyAIbb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Poster za prvi nastup", url: "https://www.instagram.com/p/DFEK_Z1CO8w/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Cover za pjesmu", url: "https://www.instagram.com/p/C6FJObMI86r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Thumbnail za video", url: "https://www.instagram.com/p/C7CbcdpNznm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Thumbnail za live", url: "https://www.instagram.com/p/C5er-8GISwH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+  { title: "Reklama za story", url: "https://www.instagram.com/p/C580uUhIScY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
 ];
 
 function renderInstagramPosts() {
@@ -117,6 +116,10 @@ const translations = {
   "filter.social": { hr: "Društvene mreže", en: "Social Media" },
   "instagram.heading": { hr: "Instagram", en: "Instagram" },
   "about.heading": { hr: "O meni", en: "About" },
+  "about.bio": {
+    hr: "Pozdrav! Ja sam Anja Kurija iz Vukovara i bavim se grafičkim dizajnom, fotografijom te obradom fotografija i videa. Izrađujem logotipe, postere, reklame i thumbnailove, a u radu koristim Adobe Photoshop, Adobe Premiere Pro i Adobe Lightroom. Kreativnost, pažnja prema detaljima i prilagodba željama klijenata temelj su mog rada. Volim isticati boje i stvarati vizuale koji privlače pažnju i ostavljaju snažan dojam. Neprestano istražujem nove tehnike i ideje kako bih svaki projekt doveo do najbolje moguće izvedbe i stvorio radove na koje mogu biti ponosna.",
+    en: "Hi! I'm Anja Kurija from Vukovar, Croatia, and I specialize in graphic design, photography, and photo and video editing. I create logos, posters, advertisements, and thumbnails using Adobe Photoshop, Adobe Premiere Pro, and Adobe Lightroom. Creativity, attention to detail, and adapting to each client's vision are at the core of my work. I enjoy using bold colors to create eye-catching visuals that leave a lasting impression. I'm always exploring new techniques and ideas to ensure every project reaches its full potential and reflects the highest quality.",
+  },
 };
 
 function applyLanguage(lang) {
